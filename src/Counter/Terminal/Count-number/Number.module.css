@@ -1,7 +1,33 @@
 .number {
-    padding: 8px 16px;
+    padding: 0;
     margin: 10px;
     border: 1px solid green;
     font-size: 160px;
+    max-height: min-content;
     border-radius: 5px;
+    font-weight: bolder;
+    background-color: #0057ff;
+    color: black;
+}
+.redMode {
+    padding: 0;
+    margin: 10px;
+    border: 1px solid green;
+    font-size: 160px;
+    max-height: min-content;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: #484848;
+    color: black;
+}
+.alertDisplay {
+    padding: 0;
+    margin: 10px;
+    border: 1px solid green;
+    font-size: 160px;
+    max-height: min-content;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: #800007;
+    color: black;
 }

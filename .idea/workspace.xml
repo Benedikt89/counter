@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Console/Console.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Counter/Console" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Counter/Terminal/Count-number" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,9 +44,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code\incubator\counter\src\Counter\Terminal" />
+      <recent name="C:\code\incubator\counter\src\Counter\SettingsBar" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\code\incubator\counter\src\Counter\Console" />
       <recent name="C:\code\incubator\counter\src\Counter\Terminal\Count-number" />
+      <recent name="C:\code\incubator\counter\src\Counter\SettingsBar" />
+      <recent name="C:\code\incubator\counter\src\Counter\Console" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -87,8 +91,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567355411600</updated>
-      <workItem from="1567355413256" duration="7409000" />
+      <workItem from="1567355413256" duration="7804000" />
+      <workItem from="1567406782216" duration="23210000" />
     </task>
+    <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
+      <created>1567364833130</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567364833130</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,10 +112,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="buttons +, -, start/&#10;&#10;stop not working;" />
+    <option name="LAST_COMMIT_MESSAGE" value="buttons +, -, start/&#10;&#10;stop not working;" />
   </component>
 </project>
