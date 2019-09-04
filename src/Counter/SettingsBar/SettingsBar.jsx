@@ -22,13 +22,15 @@ class SettingsBar extends React.Component {
     };
     onSetClick = () => {
         this.props.setBorderOfCount(this.state.inputOnNumbers, this.state.countSetter);
+        this.setState({reductionNumber: 1});
+        this.props.changeMode(false)
     };
     countSetter = () => {
         this.state.countSetter === 'min' ?
             this.setState({countSetter: 'max', inputOnNumbers: this.props.maxCount}) :
             this.setState({countSetter: 'min', inputOnNumbers: this.props.minCount})
     };
-    changer = () => {
+    redactionModeChanger = () => {
         this.setState({reductionNumber: this.changeModeRef.current.value});
         this.changeModeRef.current.value <= 0 ?
             this.props.changeMode(true): this.props.changeMode(false)
@@ -43,7 +45,7 @@ class SettingsBar extends React.Component {
             <div className={classForReductionMode()}>
                 <input className={style.slider}
                        ref={this.changeModeRef}
-                       onChange={this.changer}
+                       onChange={this.redactionModeChanger}
                        type="range"  min={0} max={1} value={this.state.reductionNumber}
                 />
                 <div>
@@ -51,10 +53,6 @@ class SettingsBar extends React.Component {
                             value={this.state.inputOnNumbers}
                             onChange={this.onInputChange}
                             className={style.text} type="number" ref={this.inputNumbers} />
-                    <button disabled={!this.props.reductionMode}
-                            className={style.btn} onClick={() => {alert('asd')}}>
-                        reset
-                    </button>
                     <button disabled={!this.props.reductionMode}
                             className={style.btn} onClick={this.onSetClick}>
                         set

@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1567355411600</updated>
       <workItem from="1567355413256" duration="7804000" />
-      <workItem from="1567406782216" duration="23210000" />
+      <workItem from="1567406782216" duration="23951000" />
+      <workItem from="1567608947123" duration="1391000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -101,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567364833130</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed with Settings bar">
+      <created>1567439026777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567439026777</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="buttons +, -, start/&#10;&#10;stop not working;" />
-    <option name="LAST_COMMIT_MESSAGE" value="buttons +, -, start/&#10;&#10;stop not working;" />
+    <MESSAGE value="Completed with Settings bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed with Settings bar" />
   </component>
 </project>

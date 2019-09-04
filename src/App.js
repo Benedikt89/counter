@@ -28,6 +28,7 @@ class App extends React.Component {
             this.showCount(newCount);
             this.setState({alertDisplay: false})
         } else {
+            this.startTimer('stop');
             this.setState({alertDisplay: true})
         }
     };
