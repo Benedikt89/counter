@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/Store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Counter/Terminal/Count-number" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,9 +54,11 @@
       <recent name="C:\code\incubator\counter\src\Counter\SettingsBar" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\code\incubator\counter\src\Counter\Terminal\Count-number" />
-      <recent name="C:\code\incubator\counter\src\Counter\SettingsBar" />
+      <recent name="C:\code\incubator\counter\public" />
       <recent name="C:\code\incubator\counter\src\Counter\Console" />
+      <recent name="C:\code\incubator\counter\src\Counter\SettingsBar" />
+      <recent name="C:\code\incubator\counter\src\Counter\Terminal" />
+      <recent name="C:\code\incubator\counter\src\Redux" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -86,7 +100,12 @@
       <updated>1567355411600</updated>
       <workItem from="1567355413256" duration="7804000" />
       <workItem from="1567406782216" duration="23951000" />
-      <workItem from="1567608947123" duration="1391000" />
+      <workItem from="1567608947123" duration="1531000" />
+      <workItem from="1568214219022" duration="9565000" />
+      <workItem from="1568228357892" duration="3706000" />
+      <workItem from="1568241104955" duration="4515000" />
+      <workItem from="1568278937478" duration="3767000" />
+      <workItem from="1568287959711" duration="10159000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -102,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567439026777</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;">
+      <created>1567610444157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567610444157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="buttons +, -, start/&#10;&#10;stop not working;" />
     <MESSAGE value="Completed with Settings bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed with Settings bar" />
+    <MESSAGE value="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;" />
   </component>
 </project>

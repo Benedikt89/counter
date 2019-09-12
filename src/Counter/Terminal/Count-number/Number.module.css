@@ -4,6 +4,7 @@
     border: 1px solid green;
     font-size: 160px;
     max-height: min-content;
+    width: 4rem!important;
     border-radius: 5px;
     font-weight: bolder;
     background-color: #0057ff;

@@ -5,8 +5,6 @@ import style from './SettingsBar.module.css'
 class SettingsBar extends React.Component {
     constructor(props) {
         super(props);
-        this.changeModeRef = React.createRef();
-        this.inputNumbers = React.createRef();
     }
 
     state = {
@@ -15,25 +13,22 @@ class SettingsBar extends React.Component {
         inputOnNumbers: this.props.minCount,
     };
 
+    onInputChange = (e) => {
+        this.setState({inputOnNumbers: e.target.value})
+    };
 
-    onInputChange = () => {
-       let newText = this.inputNumbers.current.value;
-       this.setState({inputOnNumbers: newText})
-    };
     onSetClick = () => {
-        this.props.setBorderOfCount(this.state.inputOnNumbers, this.state.countSetter);
+        if (this.state.countSetter === 'min') {
+            this.props.setMaxBorderOfCount(this.state.inputOnNumbers);
+        } else if (this.state.countSetter === 'max'){
+            this.props.setMinBorderOfCount(this.state.inputOnNumbers);
+        }
         this.setState({reductionNumber: 1});
-        this.props.changeMode(false)
+        this.props.redactionModeChanger(false);
     };
-    countSetter = () => {
-        this.state.countSetter === 'min' ?
-            this.setState({countSetter: 'max', inputOnNumbers: this.props.maxCount}) :
-            this.setState({countSetter: 'min', inputOnNumbers: this.props.minCount})
-    };
-    redactionModeChanger = () => {
-        this.setState({reductionNumber: this.changeModeRef.current.value});
-        this.changeModeRef.current.value <= 0 ?
-            this.props.changeMode(true): this.props.changeMode(false)
+
+    redactionModeChanger = (e) => {
+        this.props.redactionModeChanger(e.target.value)
     };
 
 
@@ -44,15 +39,14 @@ class SettingsBar extends React.Component {
         return (
             <div className={classForReductionMode()}>
                 <input className={style.slider}
-                       ref={this.changeModeRef}
                        onChange={this.redactionModeChanger}
-                       type="range"  min={0} max={1} value={this.state.reductionNumber}
+                       type="range" min={0} max={1} value={this.state.reductionNumber}
                 />
                 <div>
-                    <input  disabled={!this.props.reductionMode}
-                            value={this.state.inputOnNumbers}
-                            onChange={this.onInputChange}
-                            className={style.text} type="number" ref={this.inputNumbers} />
+                    <input disabled={!this.props.reductionMode}
+                           value={this.state.inputOnNumbers}
+                           onChange={this.onInputChange}
+                           className={style.text} type="number"/>
                     <button disabled={!this.props.reductionMode}
                             className={style.btn} onClick={this.onSetClick}>
                         set
@@ -61,11 +55,11 @@ class SettingsBar extends React.Component {
                 <div>
                     {this.state.countSetter === 'max' && <button
                         disabled={!this.props.reductionMode}
-                        className={style.btn} onClick={this.countSetter}
+                        className={style.btn} onClick={this.props.countSetterChange}
                     >max</button>}
                     {this.state.countSetter === 'min' && <button
                         disabled={!this.props.reductionMode}
-                        className={style.btn} onClick={this.countSetter}
+                        className={style.btn} onClick={this.props.countSetterChange}
                     >min</button>}
                 </div>
             </div>

@@ -3,18 +3,29 @@ import Number from "./Count-number/Number";
 import style from './Terminal.module.css'
 
 
-let Terminal = function (props) {
+class Terminal extends React.Component {
 
-    let countDisplay = props.numbers.map( n =>
-        <Number number={n} reductionMode={props.reductionMode} alertDisplay={props.alertDisplay}/>
-    );
+    countDisplay() {
+        let newNumbers = Array(4).fill(0);
+        let totalCount = Array.from((this.props.count).toString()).reverse();
+        newNumbers.forEach((value, index, array) => {
+            let v = totalCount[index];
+            array[index] = v ? v : 0;
+        });
+        return newNumbers.reverse();
+    }
 
-    return (
-        <div className={style.terminal}>
-            {countDisplay}
-        </div>
-    )
-};
+    render = () => {
+        let display = this.countDisplay().map(n =>
+            <Number number={n} reductionMode={this.props.reductionMode} alertDisplay={this.props.alertDisplay}/>
+        );
+        return (
+            <div className={style.terminal}>
+                {display}
+            </div>
+        )
+    }
+}
 
 
 export default Terminal;

@@ -27,10 +27,10 @@ let Console = function (props) {
                 <button disabled={props.reductionMode} onClick={props.increaseSpeed}>
                     =>>
                 </button>
-                {!props.timerOn && <button disabled={props.reductionMode} onClick={() => {props.startTimer('start')}}>
+                {!props.timerOn && <button disabled={props.reductionMode} onClick={props.startTimer}>
                     Start
                 </button>}
-                {props.timerOn && <button disabled={props.reductionMode} onClick={() => {props.startTimer('stop')}}>
+                {props.timerOn && <button disabled={props.reductionMode} onClick={props.stopTimer}>
                     Stop
                 </button>}
             </div>
