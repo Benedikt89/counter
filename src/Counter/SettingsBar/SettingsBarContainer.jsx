@@ -1,6 +1,9 @@
 import React from 'react';
 import SettingsBar from "./SettingsBar";
-import {setMaxBorderOfCountAction, changeModeAction, setMinBorderOfCountAction} from "../../Redux/CounterReducer";
+import {
+    changeModeAC,
+    setMaxBorderOfCountAC, setMinBorderOfCountAC, stopTimerThunkCreator
+} from "../../Redux/CounterReducer";
 import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
@@ -12,9 +15,10 @@ let mapStateToProps = (state) => {
 };
 let mapDispatchToProps = (dispatch) => {
     return {
-        setMaxBorderOfCount: (numbers) => {dispatch(setMaxBorderOfCountAction(numbers))},
-        setMinBorderOfCount: (numbers) => {dispatch(setMinBorderOfCountAction(numbers))},
-        redactionModeChanger: (text) => {dispatch(changeModeAction(text))},
+        setMaxBorderOfCount: (numbers) => {dispatch(setMaxBorderOfCountAC(numbers))},
+        setMinBorderOfCount: (numbers) => {dispatch(setMinBorderOfCountAC(numbers))},
+        redactionModeChanger: (text) => {dispatch(changeModeAC(text))},
+        stopTimerThunk: ()=> {dispatch(stopTimerThunkCreator())}
     }
 };
 const SettingsBarContainer = connect(mapStateToProps, mapDispatchToProps)(SettingsBar);

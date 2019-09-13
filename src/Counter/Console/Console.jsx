@@ -4,30 +4,17 @@ import style from './Console.module.css'
 
 let Console = function (props) {
 
-    let timerFunction = () => {
-        debugger
-            let intervalId;
-            if (props.timerOn) {
-                debugger
-                intervalId = setInterval(props.increaseCount, props.timerSpeed)
-            }
-            if (!props.timerOn) {
-                clearInterval(intervalId);
-            }
-    };
     let classForDisabled = () => props.reductionMode ? style.disabled : style.console;
-    let start = () => {
-        debugger
-        props.startTimer();
-        timerFunction();
-    };
+
+    let check = () => props.count >= props.maxCount ? props.stopTimerThunk(): '';
+    check();
     return (
         <div>
             <div className={classForDisabled()}>
                 <button disabled={props.reductionMode} onClick={props.increaseCount}>
                     +
                 </button>
-                <button disabled={props.reductionMode} onClick={props.resetCount}>
+                <button disabled={props.reductionMode} onClick={()=>{props.resetCount(); props.stopTimerThunk();}}>
                   Reset
                 </button>
                 <button disabled={props.reductionMode} onClick={props.decreaseCount}>
@@ -35,17 +22,17 @@ let Console = function (props) {
                 </button>
             </div>
             <div className={classForDisabled()}>
-                <button disabled={props.reductionMode} onClick={props.decreaseSpeed}>
+                <button disabled={props.reductionMode} onClick={()=>{props.increaseSpeed(); props.stopTimerThunk();}}>
                   {  "<<="}
                 </button>
                 <span>{props.timerSpeed / 1000} s</span>
-                <button disabled={props.reductionMode} onClick={props.increaseSpeed}>
+                <button disabled={props.reductionMode} onClick={()=>{props.decreaseSpeed(); props.stopTimerThunk();}}>
                     =>>
                 </button>
-                {!props.timerOn && <button disabled={props.reductionMode} onClick={start}>
+                {!props.timerOn && <button disabled={props.reductionMode} onClick={props.runTimerThunk}>
                     Start
                 </button>}
-                {props.timerOn && <button disabled={props.reductionMode} onClick={props.stopTimer}>
+                {props.timerOn && <button disabled={props.reductionMode} onClick={props.stopTimerThunk}>
                     Stop
                 </button>}
             </div>

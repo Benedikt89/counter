@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './SettingsBar.module.css'
+import {stopTimerThunkCreator} from "../../Redux/CounterReducer";
 
 
 class SettingsBar extends React.Component {
@@ -38,6 +39,7 @@ class SettingsBar extends React.Component {
             this.setState({reductionNumber: 0})
         } if (e.target.value >= 1) {
             this.props.redactionModeChanger(true)
+            this.props.stopTimerThunk();
             this.setState({reductionNumber: 1})
         }
     };

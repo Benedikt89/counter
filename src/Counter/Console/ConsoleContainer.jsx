@@ -2,10 +2,10 @@ import React from 'react';
 import './../../App.css';
 import Console from "./Console";
 import {
-    decreaseCountAction, decreaseSpeedAction,
-    increaseCountAction,
-    increaseSpeedAction, resetCountAction,
-    startTimerAction, stopTimerAction,
+    decreaseCountAC, decreaseSpeedAC,
+    increaseCountAC, increaseSpeedAC,
+    resetCountAC, runTimerThunkCreator,
+    stopTimerThunkCreator,
 } from "../../Redux/CounterReducer";
 import {connect} from "react-redux";
 
@@ -18,13 +18,13 @@ let mapStateToProps = (state) => {
 };
 let mapDispatchToProps = (dispatch) => {
     return {
-        increaseCount: ()=>{dispatch(increaseCountAction())},
-        decreaseCount: ()=>{dispatch(decreaseCountAction())},
-        startTimer: ()=>{dispatch(startTimerAction())},
-        stopTimer: ()=>{dispatch(stopTimerAction())},
-        increaseSpeed: ()=>{dispatch(increaseSpeedAction())},
-        decreaseSpeed: ()=>{dispatch(decreaseSpeedAction())},
-        resetCount: ()=>{dispatch(resetCountAction())},
+        increaseCount: ()=>{dispatch(increaseCountAC())},
+        decreaseCount: ()=>{dispatch(decreaseCountAC())},
+        increaseSpeed: ()=>{dispatch(increaseSpeedAC())},
+        decreaseSpeed: ()=>{dispatch(decreaseSpeedAC())},
+        resetCount: ()=>{dispatch(resetCountAC())},
+        runTimerThunk: ()=> {dispatch(runTimerThunkCreator())},
+        stopTimerThunk: ()=> {dispatch(stopTimerThunkCreator())}
     }
 };
 
