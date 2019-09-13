@@ -11,6 +11,7 @@ let mapStateToProps = (state) => {
         minCount: state.counterReducer.minCount,
         maxCount: state.counterReducer.maxCount,
         reductionMode: state.counterReducer.reductionMode,
+        count: state.counterReducer.count,
     }
 };
 let mapDispatchToProps = (dispatch) => {

@@ -12,10 +12,10 @@ const STOP_TIMER = 'STOP_TIMER';
 
 //initialising state
 const initialState = {
-    count: 3,
+    count: 0,
     timerOn: false,
-    maxCount: 500,
-    minCount: -999,
+    maxCount: 8,
+    minCount: 0,
     timerSpeed: 500,
     reductionMode: false,
     alertDisplay: false,
@@ -47,7 +47,7 @@ let counterReducer = (state = initialState, action) => {
                 reductionMode: action.boolean,
             };
         case RESET_COUNT:
-            if (state.minCount >= 0){
+            if (state.minCount > 0){
                 return {
                     ...state,
                     count: state.minCount,
@@ -67,29 +67,28 @@ let counterReducer = (state = initialState, action) => {
                 };
             }
         case SET_COUNT_MIN_BORDER:
-            if (action.count >= state.count || action.count >= state.maxCount) {
+            if (action.count >= state.count) {
                 return {
                     ...state,
-                    minCount: state.count,
-                    alertDisplay: true,
+                    count: parseInt(action.count),
+                    minCount: action.count,
                 };
             } else {
                 return {
                     ...state,
-                    minCount: action.count < -998 ? -999 : action.count,
+                    minCount: action.count,
                 };
             }
         case SET_COUNT_MAX_BORDER:
-            if (action.count <= state.count || action.count <= state.minCount) {
+            if (action.count <= state.count) {
                 return {
                     ...state,
-                    maxCount: action.count > 9998? 9999 : action.count,
-                    alertDisplay: true,
+                    count: parseInt(action.count),
                 };
             } else {
                 return {
                     ...state,
-                    maxCount: action.count > 9998? 9999 : action.count,
+                    maxCount: action.count,
                 };
             }
         case START_TIMER:
@@ -116,10 +115,10 @@ let counterReducer = (state = initialState, action) => {
             };
         case INCREASE_COUNT:
             newCount = state.count + 1;
-            if (newCount <= state.maxCount && 9999) {
+            if (newCount <= state.maxCount) {
                 return {
                     ...state,
-                    count: newCount,
+                    count: parseInt(newCount),
                     alertDisplay: false
                 };
             } else {
@@ -144,20 +143,18 @@ export const changeModeAC  = (boolean) =>
 export const resetCountAC  = () => ({type: RESET_COUNT});
 export const increaseSpeedAC  = () => ({type: INCREASE_SPEED});
 export const decreaseSpeedAC  = () => ({type: DECREASE_SPEED});
-export const setMinBorderOfCountAC  = (text) =>
-    ({type: SET_COUNT_MIN_BORDER, count: text,});
-export const setMaxBorderOfCountAC  = (text) =>
-    ({type: SET_COUNT_MAX_BORDER, count: text,});
+export const setMinBorderOfCountAC  = (number) =>
+    ({type: SET_COUNT_MIN_BORDER, count: number,});
+export const setMaxBorderOfCountAC  = (number) =>
+    ({type: SET_COUNT_MAX_BORDER, count: number,});
 export const startTimerAC = () => ({type: START_TIMER});
 export const stopTimerAC = () => ({type: STOP_TIMER});
 
 
 // THUNK CREATORS
-
 let interval;
 
 export const runTimerThunkCreator = () => (dispatch, getState) => {
-
     const speed = getState().counterReducer.timerSpeed;
     dispatch(startTimerAC());
     interval = setInterval(()=>{

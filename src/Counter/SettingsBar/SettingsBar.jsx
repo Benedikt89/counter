@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './SettingsBar.module.css'
-import {stopTimerThunkCreator} from "../../Redux/CounterReducer";
 
 
 class SettingsBar extends React.Component {
@@ -12,20 +11,30 @@ class SettingsBar extends React.Component {
         countSetter: 'MIN',
         reductionNumber: 0,
         inputOnNumbers: this.props.minCount,
+        alert: false,
+        alertMessage: '',
     };
 
     onInputChange = (e) => {
-        this.setState({inputOnNumbers: e.target.value})
-    };
-
-    onSetClick = () => {
+        let newCount = e.target.value;
         if (this.state.countSetter === 'MIN') {
-            this.props.setMinBorderOfCount(this.state.inputOnNumbers);
-        } else if (this.state.countSetter === 'MAX'){
-            this.props.setMaxBorderOfCount(this.state.inputOnNumbers);
+            newCount >= -999 && newCount <= this.props.maxCount ?
+                this.setState({inputOnNumbers: newCount, alert: false}) :
+                this.setState({inputOnNumbers: newCount, alert: true, alertMessage: 'count not less -999 or max count'});
+        }else if (this.state.countSetter === 'MAX'){
+            newCount <= 9999 && newCount >= this.props.minCount ?
+                this.setState({inputOnNumbers: newCount, alert: false}) :
+                this.setState({inputOnNumbers: newCount, alert: true, alertMessage: 'count not more 9999 or max count'});
         }
-        this.setState({reductionNumber: 0});
-        this.props.redactionModeChanger(false);
+    };
+    onSetClick = () => {
+        if (this.state.countSetter === 'MIN' && !this.state.alert) {
+            this.props.setMinBorderOfCount(this.state.inputOnNumbers);
+        } else if (this.state.countSetter === 'MAX' && !this.state.alert){
+            this.props.setMaxBorderOfCount(this.state.inputOnNumbers)
+        } else {
+            this.setState({alert: true})
+        }
     };
 
     countSetterChange = () => {
@@ -34,13 +43,15 @@ class SettingsBar extends React.Component {
         } else {this.setState({countSetter: 'MIN', inputOnNumbers: this.props.minCount})}
     };
     redactionModeChanger = (e) => {
-        if (e.target.value <= 1) {
-            this.props.redactionModeChanger(false)
+        if (e.target.value < 1 && !this.state.alert) {
+            this.props.redactionModeChanger(false);
             this.setState({reductionNumber: 0})
-        } if (e.target.value >= 1) {
-            this.props.redactionModeChanger(true)
+        }else if (e.target.value >= 1) {
+            this.props.redactionModeChanger(true);
             this.props.stopTimerThunk();
             this.setState({reductionNumber: 1})
+        } else {
+            this.setState({alert: true})
         }
     };
 
@@ -48,23 +59,28 @@ class SettingsBar extends React.Component {
     render = () => {
         let classForReductionMode = () =>
             this.props.reductionMode ? style.reductionMode : style.console;
+        let classForAlert = () => this.state.alert ? style.alert : '';
 
         return (
-            <div className={classForReductionMode()}>
+            <div className={classForReductionMode()} onBlur={this.redactionModeChanger}>
                 <input className={style.slider}
                        onChange={this.redactionModeChanger}
                        type="range" min={0} max={1} value={this.state.reductionNumber}
                 />
-                <div>
+                <div className={classForAlert()}>
+                    {this.state.alert&&<p><span>{this.state.alertMessage}</span></p>}
+                    <p><span>min = {this.props.minCount} </span></p>
+                    <p><span>max = {this.props.maxCount} </span></p>
                     <input disabled={!this.props.reductionMode}
                            value={this.state.inputOnNumbers}
                            onChange={this.onInputChange}
                            className={style.text} type="number"/>
-                    <button disabled={!this.props.reductionMode}
+                    <button disabled={!this.props.reductionMode||this.state.alert}
                             className={style.btn} onClick={this.onSetClick}>
                         set
                     </button>
                 </div>
+
                 <div>
                     {this.state.countSetter === 'MAX' && <button
                         disabled={!this.props.reductionMode}

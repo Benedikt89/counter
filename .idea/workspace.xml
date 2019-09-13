@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/CounterReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +96,8 @@
       <workItem from="1568241104955" duration="4515000" />
       <workItem from="1568278937478" duration="3767000" />
       <workItem from="1568287959711" duration="10366000" />
-      <workItem from="1568358588607" duration="14883000" />
+      <workItem from="1568358588607" duration="14946000" />
+      <workItem from="1568383397306" duration="6560000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -137,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568365022381</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All functions work; Settings some borders for debugging;">
+      <created>1568376433126</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568376433126</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +166,7 @@
     <MESSAGE value="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;" />
     <MESSAGE value="Added redux, set interval not work;" />
     <MESSAGE value="All functions except setinterval! work;" />
-    <option name="LAST_COMMIT_MESSAGE" value="All functions except setinterval! work;" />
+    <MESSAGE value="All functions work; Settings some borders for debugging;" />
+    <option name="LAST_COMMIT_MESSAGE" value="All functions work; Settings some borders for debugging;" />
   </component>
 </project>

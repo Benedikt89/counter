@@ -81,3 +81,8 @@
     background: #4CAF50;
     cursor: pointer;
 }
+.alert > * span {
+    font-weight: bolder;
+    color: red;
+    border-color: red;
+}
