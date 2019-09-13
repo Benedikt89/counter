@@ -5,7 +5,7 @@ import {
     decreaseCountAction, decreaseSpeedAction,
     increaseCountAction,
     increaseSpeedAction, resetCountAction,
-    startTimerAction, stopTimerAction
+    startTimerAction, stopTimerAction,
 } from "../../Redux/CounterReducer";
 import {connect} from "react-redux";
 

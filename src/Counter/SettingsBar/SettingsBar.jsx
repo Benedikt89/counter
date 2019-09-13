@@ -8,8 +8,8 @@ class SettingsBar extends React.Component {
     }
 
     state = {
-        countSetter: 'min',
-        reductionNumber: 1,
+        countSetter: 'MIN',
+        reductionNumber: 0,
         inputOnNumbers: this.props.minCount,
     };
 
@@ -18,17 +18,28 @@ class SettingsBar extends React.Component {
     };
 
     onSetClick = () => {
-        if (this.state.countSetter === 'min') {
-            this.props.setMaxBorderOfCount(this.state.inputOnNumbers);
-        } else if (this.state.countSetter === 'max'){
+        if (this.state.countSetter === 'MIN') {
             this.props.setMinBorderOfCount(this.state.inputOnNumbers);
+        } else if (this.state.countSetter === 'MAX'){
+            this.props.setMaxBorderOfCount(this.state.inputOnNumbers);
         }
-        this.setState({reductionNumber: 1});
+        this.setState({reductionNumber: 0});
         this.props.redactionModeChanger(false);
     };
 
+    countSetterChange = () => {
+        if (this.state.countSetter === 'MIN') {
+            this.setState({countSetter: 'MAX', inputOnNumbers: this.props.maxCount})
+        } else {this.setState({countSetter: 'MIN', inputOnNumbers: this.props.minCount})}
+    };
     redactionModeChanger = (e) => {
-        this.props.redactionModeChanger(e.target.value)
+        if (e.target.value <= 1) {
+            this.props.redactionModeChanger(false)
+            this.setState({reductionNumber: 0})
+        } if (e.target.value >= 1) {
+            this.props.redactionModeChanger(true)
+            this.setState({reductionNumber: 1})
+        }
     };
 
 
@@ -53,13 +64,13 @@ class SettingsBar extends React.Component {
                     </button>
                 </div>
                 <div>
-                    {this.state.countSetter === 'max' && <button
+                    {this.state.countSetter === 'MAX' && <button
                         disabled={!this.props.reductionMode}
-                        className={style.btn} onClick={this.props.countSetterChange}
+                        className={style.btn} onClick={this.countSetterChange}
                     >max</button>}
-                    {this.state.countSetter === 'min' && <button
+                    {this.state.countSetter === 'MIN' && <button
                         disabled={!this.props.reductionMode}
-                        className={style.btn} onClick={this.props.countSetterChange}
+                        className={style.btn} onClick={this.countSetterChange}
                     >min</button>}
                 </div>
             </div>

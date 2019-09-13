@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/Store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Count-number/Number.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/CounterReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +95,8 @@
       <workItem from="1568228357892" duration="3706000" />
       <workItem from="1568241104955" duration="4515000" />
       <workItem from="1568278937478" duration="3767000" />
-      <workItem from="1568287959711" duration="10159000" />
+      <workItem from="1568287959711" duration="10366000" />
+      <workItem from="1568358588607" duration="5554000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -128,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567610444157</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added redux, set interval not work;">
+      <created>1568301112691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568301112691</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +149,7 @@
     <MESSAGE value="buttons +, -, start/&#10;&#10;stop not working;" />
     <MESSAGE value="Completed with Settings bar" />
     <MESSAGE value="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed buggs with exit reduction mode on 'set'&#10;stop speed on complete maximum;" />
+    <MESSAGE value="Added redux, set interval not work;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redux, set interval not work;" />
   </component>
 </project>

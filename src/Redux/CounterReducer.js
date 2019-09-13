@@ -4,13 +4,12 @@ const initialState = {
     timerOn: false,
     maxCount: 500,
     minCount: -999,
-    timerSpeed: 500,
+    timerSpeed: 1000,
     reductionMode: false,
     alertDisplay: false,
 };
 
 let counterReducer = (state = initialState, action) => {
-    let intID;
     let newSpeed;
     let newCount;
 
@@ -32,7 +31,7 @@ let counterReducer = (state = initialState, action) => {
         case CHANGE_MODE:
             return {
                 ...state,
-                reductionMode: action.number,
+                reductionMode: action.boolean,
             };
         case RESET_COUNT:
             return {
@@ -50,46 +49,29 @@ let counterReducer = (state = initialState, action) => {
                 maxCount: action.count
             };
         case START_TIMER:
-            let callInterval = () =>{
-                newCount = state.count + 1;
-                if (newCount <= state.maxCount) {
-                    return {
-                        ...state,
-                        count: newCount,
-                        alertDisplay: false
-                    };
-                } else {
-                    clearInterval(intID);
-                    return {
-                        ...state,
-                        alertDisplay: true
-                    };
-                }
-            };
-            intID = setInterval(callInterval, state.timerSpeed);
+            debugger
             return {
                 ...state,
                 timerOn: true
             };
         case STOP_TIMER:
-            clearInterval(intID);
             return {
                 ...state,
                 timerOn: false
             };
         case INCREASE_SPEED:
             newSpeed = state.timerSpeed * 2;
-            clearInterval(intID);
             return {
                 ...state,
-                timerSpeed: newSpeed
+                timerSpeed: newSpeed,
+                timerOn: false
             };
         case DECREASE_SPEED:
             newSpeed = state.timerSpeed / 2;
-            clearInterval(intID);
             return {
                 ...state,
-                timerSpeed: newSpeed
+                timerSpeed: newSpeed,
+                timerOn: false
             };
         case INCREASE_COUNT:
             newCount = state.count + 1;
@@ -100,10 +82,10 @@ let counterReducer = (state = initialState, action) => {
                     alertDisplay: false
                 };
             } else {
-                clearInterval(intID);
                 return {
                     ...state,
-                    alertDisplay: true
+                    alertDisplay: true,
+                    timerOn: false,
                 };
             }
         default:
@@ -127,8 +109,8 @@ export default counterReducer;
 
 export const increaseCountAction  = () => ({type: INCREASE_COUNT});
 export const decreaseCountAction  = () => ({type: DECREASE_COUNT});
-export const changeModeAction  = (number) =>
-    ({type: CHANGE_MODE, number: number,});
+export const changeModeAction  = (boolean) =>
+    ({type: CHANGE_MODE, boolean: boolean,});
 export const resetCountAction  = () => ({type: RESET_COUNT});
 export const increaseSpeedAction  = () => ({type: INCREASE_SPEED});
 export const decreaseSpeedAction  = () => ({type: DECREASE_SPEED});
@@ -138,4 +120,3 @@ export const setMaxBorderOfCountAction  = (text) =>
     ({type: SET_COUNT_MAX_BORDER, text: text,});
 export const startTimerAction = () => ({type: START_TIMER});
 export const stopTimerAction = () => ({type: STOP_TIMER});
-

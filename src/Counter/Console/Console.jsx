@@ -4,8 +4,23 @@ import style from './Console.module.css'
 
 let Console = function (props) {
 
+    let timerFunction = () => {
+        debugger
+            let intervalId;
+            if (props.timerOn) {
+                debugger
+                intervalId = setInterval(props.increaseCount, props.timerSpeed)
+            }
+            if (!props.timerOn) {
+                clearInterval(intervalId);
+            }
+    };
     let classForDisabled = () => props.reductionMode ? style.disabled : style.console;
-
+    let start = () => {
+        debugger
+        props.startTimer();
+        timerFunction();
+    };
     return (
         <div>
             <div className={classForDisabled()}>
@@ -27,7 +42,7 @@ let Console = function (props) {
                 <button disabled={props.reductionMode} onClick={props.increaseSpeed}>
                     =>>
                 </button>
-                {!props.timerOn && <button disabled={props.reductionMode} onClick={props.startTimer}>
+                {!props.timerOn && <button disabled={props.reductionMode} onClick={start}>
                     Start
                 </button>}
                 {props.timerOn && <button disabled={props.reductionMode} onClick={props.stopTimer}>
