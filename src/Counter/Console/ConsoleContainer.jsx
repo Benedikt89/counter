@@ -2,10 +2,10 @@ import React from 'react';
 import './../../App.css';
 import Console from "./Console";
 import {
-    decreaseCountAC, decreaseSpeedAC,
-    increaseCountAC, increaseSpeedAC,
-    resetCountAC, runTimerThunkCreator,
-    stopTimerThunkCreator,
+    decreaseCount, decreaseSpeed,
+    increaseCount, increaseSpeed,
+    resetCount, runTimerThunk,
+    stopTimerThunk,
 } from "../../Redux/CounterReducer";
 import {connect} from "react-redux";
 
@@ -16,18 +16,9 @@ let mapStateToProps = (state) => {
         timerSpeed: state.counterReducer.timerSpeed,
     }
 };
-let mapDispatchToProps = (dispatch) => {
-    return {
-        increaseCount: ()=>{dispatch(increaseCountAC())},
-        decreaseCount: ()=>{dispatch(decreaseCountAC())},
-        increaseSpeed: ()=>{dispatch(increaseSpeedAC())},
-        decreaseSpeed: ()=>{dispatch(decreaseSpeedAC())},
-        resetCount: ()=>{dispatch(resetCountAC())},
-        runTimerThunk: ()=> {dispatch(runTimerThunkCreator())},
-        stopTimerThunk: ()=> {dispatch(stopTimerThunkCreator())}
-    }
-};
 
-const ConsoleContainer = connect(mapStateToProps, mapDispatchToProps)(Console);
+const ConsoleContainer = connect(mapStateToProps, {
+    increaseCount, decreaseCount, increaseSpeed, decreaseSpeed, resetCount, runTimerThunk, stopTimerThunk
+})(Console);
 
 export default ConsoleContainer;

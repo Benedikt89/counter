@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './SettingsBar.module.css'
+import style from './SettingsBar.module.css';
 
 
 class SettingsBar extends React.Component {
@@ -44,10 +44,10 @@ class SettingsBar extends React.Component {
     };
     redactionModeChanger = (e) => {
         if (e.target.value < 1 && !this.state.alert) {
-            this.props.redactionModeChanger(false);
+            this.props.changeMode(false);
             this.setState({reductionNumber: 0})
         }else if (e.target.value >= 1) {
-            this.props.redactionModeChanger(true);
+            this.props.changeMode(true);
             this.props.stopTimerThunk();
             this.setState({reductionNumber: 1})
         } else {
@@ -62,7 +62,7 @@ class SettingsBar extends React.Component {
         let classForAlert = () => this.state.alert ? style.alert : '';
 
         return (
-            <div className={classForReductionMode()} onBlur={this.redactionModeChanger}>
+            <div className={classForReductionMode()}>
                 <input className={style.slider}
                        onChange={this.redactionModeChanger}
                        type="range" min={0} max={1} value={this.state.reductionNumber}

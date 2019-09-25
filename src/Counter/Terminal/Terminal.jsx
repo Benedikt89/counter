@@ -15,6 +15,7 @@ class Terminal extends React.Component {
         return newNumbers.reverse();
     }
 
+    check = () => {if (this.props.count === this.props.maxCount) {this.props.stopTimerThunk()}};
     render = () => {
         let display = this.countDisplay().map(n =>
             <Number number={n} reductionMode={this.props.reductionMode} alertDisplay={this.props.alertDisplay}/>

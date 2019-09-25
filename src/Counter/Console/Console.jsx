@@ -3,9 +3,7 @@ import './../../App.css';
 import style from './Console.module.css'
 
 let Console = function (props) {
-
     let classForDisabled = () => props.reductionMode ? style.disabled : style.console;
-
     let check = () => props.count >= props.maxCount ? props.stopTimerThunk(): '';
     check();
     return (
@@ -29,7 +27,7 @@ let Console = function (props) {
                 <button disabled={props.reductionMode} onClick={()=>{props.decreaseSpeed(); props.stopTimerThunk();}}>
                     =>>
                 </button>
-                {!props.timerOn && <button disabled={props.reductionMode} onClick={props.runTimerThunk}>
+                {!props.timerOn && <button disabled={props.reductionMode} onClick={!props.timerOn ? props.runTimerThunk :''}>
                     Start
                 </button>}
                 {props.timerOn && <button disabled={props.reductionMode} onClick={props.stopTimerThunk}>

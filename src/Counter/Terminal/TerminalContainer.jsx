@@ -11,11 +11,6 @@ let mapStateToProps = (state) => {
     }
 };
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-    }
-};
-
-const TerminalContainer = connect(mapStateToProps, mapDispatchToProps)(Terminal);
+const TerminalContainer = connect(mapStateToProps, {})(Terminal);
 
 export default TerminalContainer;

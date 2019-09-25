@@ -14,8 +14,8 @@ const STOP_TIMER = 'STOP_TIMER';
 const initialState = {
     count: 0,
     timerOn: false,
-    maxCount: 8,
-    minCount: 0,
+    maxCount: 99,
+    minCount: -44,
     timerSpeed: 500,
     reductionMode: false,
     alertDisplay: false,
@@ -99,7 +99,7 @@ let counterReducer = (state = initialState, action) => {
         case STOP_TIMER:
             return {
                 ...state,
-                timerOn: false
+                timerOn: false,
             };
         case INCREASE_SPEED:
             newSpeed = state.timerSpeed * 2;
@@ -136,32 +136,31 @@ let counterReducer = (state = initialState, action) => {
 export default counterReducer;
 
 //action creators
-export const increaseCountAC  = () => ({type: INCREASE_COUNT});
-export const decreaseCountAC  = () => ({type: DECREASE_COUNT});
-export const changeModeAC  = (boolean) =>
+export const increaseCount  = () => ({type: INCREASE_COUNT});
+export const decreaseCount  = () => ({type: DECREASE_COUNT});
+export const changeMode  = (boolean) =>
     ({type: CHANGE_MODE, boolean: boolean,});
-export const resetCountAC  = () => ({type: RESET_COUNT});
-export const increaseSpeedAC  = () => ({type: INCREASE_SPEED});
-export const decreaseSpeedAC  = () => ({type: DECREASE_SPEED});
-export const setMinBorderOfCountAC  = (number) =>
+export const resetCount  = () => ({type: RESET_COUNT});
+export const increaseSpeed  = () => ({type: INCREASE_SPEED});
+export const decreaseSpeed  = () => ({type: DECREASE_SPEED});
+export const setMinBorderOfCount  = (number) =>
     ({type: SET_COUNT_MIN_BORDER, count: number,});
-export const setMaxBorderOfCountAC  = (number) =>
+export const setMaxBorderOfCount  = (number) =>
     ({type: SET_COUNT_MAX_BORDER, count: number,});
-export const startTimerAC = () => ({type: START_TIMER});
-export const stopTimerAC = () => ({type: STOP_TIMER});
-
+export const startTimer = () => ({type: START_TIMER});
+export const stopTimer = () => ({type: STOP_TIMER});
 
 // THUNK CREATORS
 let interval;
 
-export const runTimerThunkCreator = () => (dispatch, getState) => {
+export const runTimerThunk = () => (dispatch, getState) => {
     const speed = getState().counterReducer.timerSpeed;
-    dispatch(startTimerAC());
+    dispatch(startTimer());
     interval = setInterval(()=>{
-        dispatch(increaseCountAC())
+        dispatch(increaseCount())
     },speed)
 };
-export const stopTimerThunkCreator = () => (dispatch) => {
-    dispatch(stopTimerAC());
+export const stopTimerThunk = () => (dispatch) => {
+    dispatch(stopTimer());
     clearInterval(interval)
 };

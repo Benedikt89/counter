@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/CounterReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,7 +100,9 @@
       <workItem from="1568278937478" duration="3767000" />
       <workItem from="1568287959711" duration="10366000" />
       <workItem from="1568358588607" duration="14946000" />
-      <workItem from="1568383397306" duration="6560000" />
+      <workItem from="1568383397306" duration="6672000" />
+      <workItem from="1568408740586" duration="2710000" />
+      <workItem from="1569434447726" duration="1136000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -141,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568376433126</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed buggs, reduction mode borders">
+      <created>1568391249917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568391249917</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +179,7 @@
     <MESSAGE value="Added redux, set interval not work;" />
     <MESSAGE value="All functions except setinterval! work;" />
     <MESSAGE value="All functions work; Settings some borders for debugging;" />
-    <option name="LAST_COMMIT_MESSAGE" value="All functions work; Settings some borders for debugging;" />
+    <MESSAGE value="fixed buggs, reduction mode borders" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed buggs, reduction mode borders" />
   </component>
 </project>
