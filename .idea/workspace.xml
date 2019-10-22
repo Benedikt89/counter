@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f9257f97-4f85-4c2f-a18b-d49cc4323362" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/Console.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Console/ConsoleContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/SettingsBar/SettingsBarContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/Terminal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Terminal/TerminalContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/CounterReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/CounterReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +66,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -80,6 +86,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -102,7 +124,9 @@
       <workItem from="1568358588607" duration="14946000" />
       <workItem from="1568383397306" duration="6672000" />
       <workItem from="1568408740586" duration="2710000" />
-      <workItem from="1569434447726" duration="1136000" />
+      <workItem from="1569434447726" duration="1434000" />
+      <workItem from="1570722073273" duration="3610000" />
+      <workItem from="1571762204785" duration="1777000" />
     </task>
     <task id="LOCAL-00001" summary="buttons +, -, start/&#10;&#10;stop not working;">
       <created>1567364833130</created>
@@ -153,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568391249917</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactoring on mapDispatchToProps">
+      <created>1569435856377</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569435856377</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +211,7 @@
     <MESSAGE value="All functions except setinterval! work;" />
     <MESSAGE value="All functions work; Settings some borders for debugging;" />
     <MESSAGE value="fixed buggs, reduction mode borders" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed buggs, reduction mode borders" />
+    <MESSAGE value="refactoring on mapDispatchToProps" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring on mapDispatchToProps" />
   </component>
 </project>

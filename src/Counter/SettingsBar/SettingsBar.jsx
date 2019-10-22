@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './SettingsBar.module.css';
 
-
 class SettingsBar extends React.Component {
     constructor(props) {
         super(props);
